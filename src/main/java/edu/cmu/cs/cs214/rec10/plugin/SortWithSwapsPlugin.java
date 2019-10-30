@@ -47,10 +47,9 @@ public class SortWithSwapsPlugin implements GamePlugin {
     // Make random permutation of the array
     Random random = new Random();
 
-    int i;
     // For every position i, chooses a random position >= i and swaps it with the value at position i,
     // generating a random permutation of arr.
-    for(i = 0; i < 10; i++) {
+    for(int i = 0; i < 10; i++) {
       int nextIndex;
 
       // Find an index at position >= i to swap to position i.
@@ -62,7 +61,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
       arr[nextIndex] = temp;
     }
 
-    for(i = 0; i < 10; i++) {
+    for(int i = 0; i < 10; i++) {
       framework.setSquare(i, 0, Integer.toString(arr[i]));
     }
   }
